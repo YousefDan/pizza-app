@@ -1,0 +1,44 @@
+.container {
+  width: 90%;
+  padding: 20px 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title,
+.price {
+  font-size: 21px;
+  font-weight: bold;
+}
+.title {
+  color: #d1411e;
+}
+.price {
+  color: #666;
+}
+.desc {
+  text-align: center;
+  color: #777;
+}
+
+@media screen and (min-width: 520px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .container {
+    width: 30%;
+  }
+  .title,.price {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 21%;
+  }
+}

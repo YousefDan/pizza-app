@@ -1,0 +1,52 @@
+.container {
+    height: calc(100vh - 100px);
+    background-color: #222;
+    display: flex;
+}
+.item {
+    flex: 1;
+    position: relative;
+    display: flex;
+}
+.item:last-child {
+    flex: 2;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card {
+    flex: 1;
+    padding: 0 21px;
+}
+.title {
+    font-size: 17px;
+    color: #b7903c;
+}
+.text {
+    color: lightgray;
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+      height: auto;
+      flex-direction: column;
+    }
+    .item:last-child {
+        padding: 21px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .card {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .text, .title {
+        font-size: 21px;
+    }
+    .item:first-child {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 21px 10px;
+}
+.desc {
+  font-size: 24px;
+  color: #444;
+  width: 75%;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    justify-content: center;
+    text-align: center;
+  }
+  .desc {
+    text-align: justify;
+  }
+}

@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+.left {
+  flex: 2;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.row:last-child {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  align-items: center;
+}
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: inProgress 1s ease infinite alternate;
+}
+@keyframes inProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.undone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.3;
+}
+.undone .checkedIcon,
+.inProgress .checkedIcon {
+  display: none;
+}
+
+/* Right */
+.right {
+  flex: 1;
+}
+.wrapper {
+  width: 400px;
+  max-height: 300px;
+  background-color: #333;
+  color: white;
+  padding: 10px 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.button {
+  background-color: white;
+  height: 30px;
+  color: teal;
+  font-weight: bold;
+  margin-top: 21px;
+  cursor: not-allowed;
+  border: none;
+}
+
+@media screen and (max-width: 760px) {
+  .row:last-child {
+    width: 100%;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .trTitle {
+    display: none;
+  }
+  .tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .tr td {
+    margin: 17px 0;
+  }
+  .id::before {
+    content: "Order ID : ";
+    font-weight: bold;
+  }
+  .name::before {
+    content: "Customer Name : ";
+    font-weight: bold;
+  }
+  .address::before {
+    content: "Address : ";
+    font-weight: bold;
+  }
+  .total::before {
+    content: "Total : ";
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 50px;
+    flex-direction: row;
+  }
+  .wrapper {
+    margin-top: 0;
+    width: 90%;
+  }
+}
